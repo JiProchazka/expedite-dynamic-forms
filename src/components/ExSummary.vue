@@ -27,7 +27,7 @@ function formatValue(value: any) {
 </script>
 
 <template>
-  <div class="lg:w-1/3 flex flex-col gap-y-4 lg:pl-10">
+  <div class="md:w-1/3 flex flex-col gap-y-4 md:pl-10">
     <h2 class="my-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Summary</h2>
     <div class="flex flex-col gap-y-4">
       <template v-for="field in template.form.fields" :key="field.name">

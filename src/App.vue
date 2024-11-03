@@ -54,17 +54,21 @@ async function handleSubmit(form: object) {
 </script>
 
 <template>
-  <div class="flex justify-center items-center p-6 lg:p-0 lg:pt-6">
-    <ExCard class="lg:w-5/6">
+  <div class="flex justify-center items-center p-6 md:p-0 md:pt-6">
+    <ExCard class="md:w-5/6">
       <div class="flex">
         <template v-if="template && model">
+          <div class="w-full md:w-2/3 md:border-r md:border-gray-200 md:pr-10">
           <ExDynamicForm
             v-model="model"
             :template="template"
             :is-loading="isLoading"
             :errors="errors"
             @submit="handleSubmit" />
-          <ExSummary :template="template" :model="model" />
+          </div>
+          <div class="hidden md:block">
+            <ExSummary :template="template" :model="model" />
+          </div>
         </template>
         <div v-else class="w-full flex items-center justify-center">
           <ExSpinner />
