@@ -38,8 +38,8 @@ const id = htmlId()
 </script>
 
 <template>
-  <ExInputLabel :id="id" :required="required" :label="label" :error="error" />
   <div>
+    <ExInputLabel :id="id" :required="required" :label="label" :error="error" />
     <select
       v-bind-once="{ id }"
       v-model="model"
