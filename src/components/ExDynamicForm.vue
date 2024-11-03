@@ -12,6 +12,10 @@ const props = defineProps({
   isLoading: {
     type: Boolean,
     default: false
+  },
+  errors: {
+    type: Object as PropType<Record<string, any>>,
+    required: true
   }
 })
 
@@ -31,7 +35,7 @@ function handleSubmit() {
 <template>
   <form class="flex flex-col gap-y-4 w-2/3 border-r border-gray-200 pr-10">
     <h1 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ template.title }}</h1>
-    <component v-for="field in formFields" :key="field.name" :is="field.component" v-bind="field.props" v-model="model[field.name]" :disabled="isLoading" />
+    <component v-for="field in formFields" :key="field.name" :is="field.component" v-bind="field.props" v-model="model[field.name]" :disabled="isLoading" :error="errors[field.name]" />
     <ExButton @click="handleSubmit" :is-loading="isLoading">{{ template.button }}</ExButton>
   </form>
 </template>
