@@ -15,7 +15,8 @@ export default function useFakeApi() {
     });
   }
 
-  function saveData() {
+  function saveData(model: object) {
+    console.log("Saving data", model)
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(200);
@@ -23,7 +24,8 @@ export default function useFakeApi() {
     });
   }
 
-  function fakeError() {
+  function fakeError(model: object) {
+    console.log("Saving data, but throwing error", model)
     return new Promise((_, reject) => {
       setTimeout(() => {
         reject("Error");
