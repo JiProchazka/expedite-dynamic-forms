@@ -15,7 +15,7 @@ defineProps({
 })
 
 function formatValue(value: unknown) {
-  if (value === null || value === undefined) {
+  if (value === null || value === undefined || value === "") {
     return "-"
   }
 
