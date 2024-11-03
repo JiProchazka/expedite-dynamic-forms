@@ -1,0 +1,89 @@
+{
+  "title": "Expedite Dynamic Form",
+  "button": "Send",
+  "form": {
+    "fields": [
+      {
+        "type": "text",
+        "label": "Name",
+        "name": "name",
+        "validations": {
+          "required": true,
+          "min": 3
+        }
+      },
+      {
+        "type": "email",
+        "label": "E-mail",
+        "name": "email",
+        "validations": {
+          "required": true,
+          "email": true
+        },
+        "defaultValue": "@"
+      },
+      {
+        "type": "text",
+        "label": "Address",
+        "name": "address",
+        "validations": {
+          "required": true
+        },
+        "conditions": [
+          {
+            "field": "city",
+            "value": "brno"
+          }
+        ]
+      },
+      {
+        "type": "textarea",
+        "rows": 10,
+        "label": "Message",
+        "name": "message",
+        "validations": {}
+      },
+      {
+        "type": "switch",
+        "label": "Agree with Terms",
+        "name": "terms",
+        "validations": {},
+        "defaultValue": true
+      },
+      {
+        "type": "radio",
+        "label": "Yes",
+        "name": "decision1",
+        "group": "decision",
+        "value": "yes"
+      },
+      {
+        "type": "radio",
+        "label": "No",
+        "name": "decision2",
+        "group": "decision",
+        "value": "no"
+      },
+      {
+        "type": "select",
+        "label": "City",
+        "name": "city",
+        "defaultValue": "praha",
+        "options": [
+          {
+            "label": "Praha",
+            "value": "praha"
+          },
+          {
+            "label": "Brno",
+            "value": "brno"
+          },
+          {
+            "label": "Ostrava",
+            "value": "ostrava"
+          }
+        ]
+      }
+    ]
+  }
+}
