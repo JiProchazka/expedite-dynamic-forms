@@ -50,7 +50,7 @@ async function handleSubmit(form: object) {
       <div class="flex">
         <template v-if="template && model">
           <ExDynamicForm :template="template" v-model="model" @submit="handleSubmit" :is-loading="isLoading" />
-          <ExSummary :model="model" />
+          <ExSummary :template="template" :model="model" />
         </template>
         <div v-else class="w-full flex items-center justify-center">
           <ExSpinner />
