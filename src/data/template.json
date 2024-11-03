@@ -10,15 +10,6 @@
         "validations": {
           "required": true,
           "min": 3
-        }
-      },
-      {
-        "type": "email",
-        "label": "E-mail",
-        "name": "email",
-        "validations": {
-          "required": true,
-          "email": true
         },
         "defaultValue": "@"
       },
@@ -28,13 +19,7 @@
         "name": "address",
         "validations": {
           "required": true
-        },
-        "conditions": [
-          {
-            "field": "city",
-            "value": "brno"
-          }
-        ]
+        }
       },
       {
         "type": "textarea",
@@ -51,36 +36,22 @@
         "defaultValue": true
       },
       {
-        "type": "radio",
-        "label": "Yes",
-        "name": "decision1",
-        "group": "decision",
-        "value": "yes"
-      },
-      {
-        "type": "radio",
-        "label": "No",
-        "name": "decision2",
-        "group": "decision",
-        "value": "no"
-      },
-      {
         "type": "select",
         "label": "City",
         "name": "city",
         "defaultValue": "praha",
         "options": [
           {
-            "label": "Praha",
+            "name": "Praha",
             "value": "praha"
           },
           {
-            "label": "Brno",
-            "value": "brno"
+            "name": "New York",
+            "value": "new-work"
           },
           {
-            "label": "Ostrava",
-            "value": "ostrava"
+            "name": "London",
+            "value": "london"
           }
         ]
       }

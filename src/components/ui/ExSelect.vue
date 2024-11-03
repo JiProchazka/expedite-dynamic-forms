@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { clsx } from "clsx"
 import type { PropType } from "vue"
-import type { Option } from "@/types/Option"
+import type { Option } from "@/types/ui/Option"
 import ExInputError from '@/components/ui/ExInputError.vue'
 import ExInputLabel from '@/components/ui/ExInputLabel.vue'
 import useHtmlId from '@/composables/useHtmlId'
@@ -59,6 +59,7 @@ const id = htmlId()
       "
       :disabled="disabled"
     >
+      <option selected disabled>{{ placeholder }}</option>
       <option v-for="option in options" :key="option.value" :value="option.value">{{ option.name }}</option>
     </select>
   </div>

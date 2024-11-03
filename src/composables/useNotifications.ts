@@ -1,5 +1,5 @@
 import { defineStore } from "pinia"
-import type { Notification } from "@/types/Notification"
+import type { Notification } from "@/types/ui/Notification"
 
 const DURATION = 2000
 
