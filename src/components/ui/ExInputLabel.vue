@@ -25,7 +25,7 @@ defineProps({
     v-bind-once="{ for: id }"
     :class="
       clsx(
-        'block mb-2 text-sm font-medium',
+        'block mb-2 text-sm font-medium whitespace-nowrap',
         !error && 'text-gray-900 dark:text-white',
         error && 'text-error-700 dark:text-error-500',
       )
